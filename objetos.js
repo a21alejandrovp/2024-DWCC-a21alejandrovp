@@ -107,7 +107,7 @@
 //
 //
 //
-// POR HACER
+// POR HACER (DATE, ARRAYS)
 //
 //
 //
@@ -163,30 +163,22 @@
 // console.log(diasTranscurridos(new Date(2024, 9, 11)));
 // console.log(diasTranscurridos(new Date(2024, 0, 11)));
 
-//
-//
-//
-//
-// POR HACER
-//
-//
-//
-//
-
 // ARRAYS - EJERCICIO 1 - PÁGINA 10
 // --------------------------------
 // POR TERMINAR
 
 // const numeros = [1, 3, 5, 1, 4, 1, 6, 8, 10, 1];
-//
+
 // function indices(elemento, arrayElementos) {
 //   let newArrayElementos = [];
-//
+
 //   for (let i = 0; i < arrayElementos.length; i++) {
-// if (arrayElementos[i] == elemento) {
-//   newArrayElementos[i] = i;
-// }
+//     if (arrayElementos[i] === elemento) {
+//       newArrayElementos.push(i);
+//     }
+
+//     return newArrayElementos;
 //   }
 // }
-//
+
 // console.log(indices(1, numeros));
