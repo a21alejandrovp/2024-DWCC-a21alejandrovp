@@ -182,3 +182,77 @@
 // }
 
 // console.log(indices(1, numeros));
+
+//
+//
+//
+//
+// ACTUALIZADO
+//
+//
+//
+//
+
+// OBJETOS - EJERCICIO 1 - PÁGINA 23
+// ---------------------------------
+
+// const television = {
+//   marca: "LG",
+//   categoría: "televisores",
+//   unidades: 4,
+//   prezo: 354.99,
+//   importe() {
+//     prezoTotalUnidades = this.prezo * this.unidades;
+//     console.log(prezoTotalUnidades);
+//   },
+// };
+
+// console.log(television);
+// television.importe();
+
+// OBJETOS - EJERCICIO 2 - PÁGINA 23
+// ---------------------------------
+
+// const game = {
+//   odds: {
+//     team1: 1.33,
+//     x: 3.25,
+//     team2: 6.5,
+//   },
+// };
+
+// const {
+//   odds: { team1, x, team2 },
+// } = game;
+// console.log(team1, x, team2);
+
+// OBJETOS - EJERCICIO 3.A - PÁGINA 23
+// -----------------------------------
+
+// const game = {
+//   scored: ["Lewandowski", "Gnarby", "Lewandowski", "Hummels"],
+// };
+
+// for (const [key, value] of Object.entries(game.scored)) {
+//   console.log(`Gol ${parseInt(key) + 1}: ${value}`);
+// }
+
+// OBJETOS - EJERCICIO 3.B - PÁGINA 23
+// -----------------------------------
+
+const game = {
+  scored: ["Lewandowski", "Gnarby", "Lewandowski", "Hummels"],
+};
+
+const scorers = {};
+
+for (let i of Object.values(game.scored)) {
+  for (const [key, value] of Object.entries(scorers)) {
+      if (key == i) {
+          ${ value } ++;
+    } else {
+      scorers = { i: value };
+    }
+  }
+  console.log(i);
+}
