@@ -239,20 +239,3 @@
 
 // OBJETOS - EJERCICIO 3.B - PÁGINA 23
 // -----------------------------------
-
-const game = {
-  scored: ["Lewandowski", "Gnarby", "Lewandowski", "Hummels"],
-};
-
-const scorers = {};
-
-for (let i of Object.values(game.scored)) {
-  for (const [key, value] of Object.entries(scorers)) {
-      if (key == i) {
-          ${ value } ++;
-    } else {
-      scorers = { i: value };
-    }
-  }
-  console.log(i);
-}
