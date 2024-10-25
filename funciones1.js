@@ -152,3 +152,37 @@
 // FUNCIONES - EJERCICIO 9 - PÁGINA 9
 // ----------------------------------
 // ----------------------------------
+
+//
+//
+//
+//
+// POR HACER (FUNCIONES 9, 10 Y 11 - PÁGINAS 9, 10 Y 11)
+//
+//
+//
+//
+
+// MÉTODOS DE ARRAYS - EJERCICIO 1 - PAǴINA 22
+// -------------------------------------------
+// -------------------------------------------
+
+const objects = [{ price: 1 }, { price: 2 }, { price: 3 }];
+
+// let valores = objects.reduce(
+//   (accumulator, currentValue) => accumulator + currentValue.price,
+//   0
+// );
+
+// console.log(valores);
+
+// MÉTODOS DE ARRAYS - EJERCICIO 2 - PÁGINA 22
+// -------------------------------------------
+// -------------------------------------------
+
+numbers = [3, 5, 19, 0, 65, 29];
+let minNumber = numbers.reduce(
+  (number, actualValue) => (number > actualValue ? number : actualValue),
+  0
+);
+console.log(minNumber);
