@@ -167,7 +167,7 @@
 // -------------------------------------------
 // -------------------------------------------
 
-const objects = [{ price: 1 }, { price: 2 }, { price: 3 }];
+// const objects = [{ price: 1 }, { price: 2 }, { price: 3 }];
 
 // let valores = objects.reduce(
 //   (accumulator, currentValue) => accumulator + currentValue.price,
@@ -180,9 +180,100 @@ const objects = [{ price: 1 }, { price: 2 }, { price: 3 }];
 // -------------------------------------------
 // -------------------------------------------
 
-numbers = [3, 5, 19, 0, 65, 29];
-let minNumber = numbers.reduce(
-  (number, actualValue) => (number > actualValue ? number : actualValue),
-  0
-);
-console.log(minNumber);
+// numbers = [3, 5, 19, 0, 65, 29];
+// let minNumber = numbers.reduce(
+//   (number, actualValue) => (number > actualValue ? number : actualValue),
+//   0
+// );
+// console.log(minNumber);
+
+// MÉTODOS DE ARRAYS - EJERCICIO 1.A - PÁGINA 23
+// ---------------------------------------------
+// ---------------------------------------------
+
+// const persoas = [
+//   { nome: "aaron", idade: 65, id: 1 },
+//   { nome: "beth", idade: 2, id: 2 },
+//   { nome: "ánxeles", idade: 13, id: 3 },
+//   { nome: "daniel", idade: 3, id: 4 },
+//   { nome: "ada", idade: 25, id: 5 },
+//   { nome: "erea", idade: 1, id: 6 },
+//   { nome: "navia", idade: 43, id: 7 },
+// ];
+
+// const maioresDeIdade = persoas.filter((x) => x.idade >= 18);
+// console.log(maioresDeIdade);
+
+// MÉTODOS DE ARRAYS - EJERCICIO 1.B - PÁGINA 23
+// ---------------------------------------------
+// ---------------------------------------------
+
+// const nomesPersoas = persoas.map((x) => x.nome);
+// console.log(nomesPersoas);
+
+// MÉTODOS DE ARRAYS - EJERCICIO 1.C - PÁGINA 23
+// ---------------------------------------------
+// ---------------------------------------------
+
+// const nomesEnMaiusculas = persoas.map((x) => x.nome.toUpperCase());
+// console.log(nomesEnMaiusculas);
+
+// MÉTODOS DE ARRAYS - EJERCICIO 1.D - PÁGINA 23
+// ---------------------------------------------
+// ---------------------------------------------
+
+// const idENome = persoas.map((x) => ({ Nome: x.nome, ID: x.id }));
+// console.log(idENome);
+
+// MÉTODOS DE ARRAYS - EJERCICIO 2.A - PÁGINA 23
+// ---------------------------------------------
+// ---------------------------------------------
+
+const diasSemana = [
+  "lunes",
+  "martes",
+  "miércoles",
+  "jueves",
+  "viernes",
+  "sábado",
+  "domingo",
+];
+
+// const empezanPorM = diasSemana.filter((x) => x.startsWith("m"));
+// console.log(empezanPorM);
+
+// MÉTODOS DE ARRAYS - EJERCICIO 2.B - PÁGINA 23
+// ---------------------------------------------
+// ---------------------------------------------
+
+// OPCIÓN 1
+// --------
+// --------
+// if (diasSemana.filter((x) => x.startsWith("s")).length != 0) {
+//   console.log("HAY algún día de la semana que empieza por 'S'");
+// } else {
+//   console.log("NO HAY ningún día de la semana que empieza por 'S'");
+// }
+
+// OPCIÓN 2
+// --------
+// --------
+// const empiezaPorS = (x) => x.charAt(0) == "s";
+
+// if (diasSemana.some(empiezaPorS) == true) {
+//   console.log("HAY algún día de la semana que empieza por 'S'");
+// } else {
+//   console.log("NO HAY ningún día de la semana que empieza por 'S'");
+// }
+
+// MÉTODOS DE ARRAYS - EJERCICIO 2.C - PÁGINA 23
+// ---------------------------------------------
+// ---------------------------------------------
+
+// const acabanEnS = (x) => x.charAt(length) == "s";
+
+// if (diasSemana.every(acabanEnS) == true) {
+//   console.log("TODOS los días de la semana acaban en 'S'");
+// } else {
+//   console.log("NO TODOS los días de la semana acaban en 'S'");
+// }
