@@ -175,6 +175,28 @@
 // ----------------------------------
 // ----------------------------------
 
+const buscarPatron = (texto, patron) => {
+  let long = patron.length;
+  let contador = 0;
+
+  for (let i = 0; i < texto.length; i++) {
+    for (let j = 0; j < long; j++) {
+      if (texto[i] == patron[j]) {
+        i++;
+      }
+
+      if (i == long) {
+        contador++;
+        break;
+      }
+    }
+  }
+
+  console.log(contador);
+};
+
+console.log(buscarPatron("ABCD2139II0ABCABCLA", "ABC"));
+
 //
 //
 //
