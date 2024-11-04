@@ -336,7 +336,7 @@ console.log(buscarPatron("ABCD2139II0ABCABCLA", "ABC"));
 // ---------------------------------------------
 // ---------------------------------------------
 
-// const acabanEnS = (x) => x.charAt(length) == "s";
+// const acabanEnS = (x) => x.charAt(length - 1) == "s";
 
 // if (diasSemana.every(acabanEnS) == true) {
 //   console.log("TODOS los días de la semana acaban en 'S'");
@@ -547,11 +547,11 @@ console.log(buscarPatron("ABCD2139II0ABCABCLA", "ABC"));
 
 // console.log(maisLonxevos);
 
-// // MÉTODOS DE ARRAYS - EJERCICIO 6 - PÁGINA 24
-// ----------------------------------------------
-// ----------------------------------------------
-// ----------------------------------------------
-// ----------------------------------------------
+// MÉTODOS DE ARRAYS - EJERCICIO 6 - PÁGINA 24
+// -------------------------------------------
+// -------------------------------------------
+// -------------------------------------------
+// -------------------------------------------
 
 const data = [
   "car",
