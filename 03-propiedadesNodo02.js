@@ -9,7 +9,6 @@
 // ------------------------------------------------
 // ------------------------------------------------
 // ------------------------------------------------
-// ------------------------------------------------
 
 const enlaces = document.getElementsByTagName("a");
 const enlacesLen = enlaces.length;
@@ -19,3 +18,20 @@ console.log(enlacesLen);
 
 const penultima = document.body.querySelectorAll("a")[enlacesLen - 2];
 console.log(penultima);
+
+console.log(document.documentElement);
+
+// ------------------------------------------------
+
+const ligazonsProba = document.getElementsByTagName("a");
+let contador = 0;
+
+for (const a of ligazonsProba) {
+  if ((a.href = "http://proba")) {
+    contador++;
+  }
+}
+
+// ------------------------------------------------
+
+// SEGUIR EN EL APARTADO 4
