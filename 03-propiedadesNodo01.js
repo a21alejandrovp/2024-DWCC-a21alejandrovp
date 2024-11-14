@@ -25,8 +25,8 @@ console.log(value);
 
 // ------------------------------------------------
 
-// const valueChecked = formLabel.
-// console.log(valueChecked);
+const valueChecked = formLabel.querySelector("input:checked").value;
+console.log(valueChecked);
 
 // ------------------------------------------------
 

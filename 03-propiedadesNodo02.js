@@ -23,15 +23,9 @@ console.log(document.documentElement);
 
 // ------------------------------------------------
 
-const ligazonsProba = document.getElementsByTagName("a");
-let contador = 0;
-
-for (const a of ligazonsProba) {
-  if ((a.href = "http://proba")) {
-    contador++;
-  }
-}
+const ligazonsProba = document.querySelectorAll("a[href='http://proba']");
+console.log(ligazonsProba.length);
 
 // ------------------------------------------------
 
-// SEGUIR EN EL APARTADO 4
+console.log(document.querySelectorAll("p")[2].getElementsByTagName("a").length);
