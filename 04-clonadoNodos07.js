@@ -103,7 +103,8 @@ const crearCalendario = function crearCalendario(elemento, ano, mes) {
   const diaDeInicio = primeiroDiaDoMes.getDay(); // = 2 ya que es un miércoles
   let dia = 1;
   const ultimoDiaDoMes = new Date(ano, mes, 0);
-  console.log(ultimoDiaDoMes);
+  const diaDeFin = ultimoDiaDoMes.getDate();
+  console.log(diaDeFin);
 
   const ul = document.createElement("table");
   const thead = document.createElement("thead");
@@ -127,11 +128,15 @@ const crearCalendario = function crearCalendario(elemento, ano, mes) {
         const td = document.createElement("td");
         tr2.append(td);
         contador++;
-      } else {
+      } else if (contador <= diaDeFin + 1) {
         const td = document.createElement("td");
         td.innerText = dia;
         tr2.append(td);
         dia++;
+        contador++;
+      } else {
+        const td = document.createElement("td");
+        tr2.append(td);
       }
     }
     tbody.append(tr2);
@@ -140,4 +145,4 @@ const crearCalendario = function crearCalendario(elemento, ano, mes) {
   elemento.append(ul);
 };
 
-crearCalendario(document.body, 2022, 11);
+crearCalendario(document.body, 2022, 12);
