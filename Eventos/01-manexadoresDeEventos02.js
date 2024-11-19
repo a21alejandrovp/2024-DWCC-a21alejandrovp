@@ -4,17 +4,15 @@
 // ------------------------------------------------------------------------------------------------------------------
 // ------------------------------------------------------------------------------------------------------------------
 
-// MANEJADORES DE EVENTOS - EJERCICIO 1 - PÁGINA 5
+// MANEJADORES DE EVENTOS - EJERCICIO 2 - PÁGINA 5
 // -----------------------------------------------
 // -----------------------------------------------
 // -----------------------------------------------
 // -----------------------------------------------
 
-const cambiarClase = function cambiarClase() {
-  const span = document.getElementById("adicional").classList.toggle("oculto");
-  const ligazon = document.getElementById("ligazon").classList.toggle("oculto");
+const valorTexto = document.querySelector("input[id='text']").value;
+console.log(valorTexto);
+
+const añadirALaLista = function añadirALaLista() {
+  const nuevoLi = document.getElementById("ul").append;
 };
-
-const mostrarSpan = document
-  .getElementById("ligazon")
-  .addEventListener("click", cambiarClase);

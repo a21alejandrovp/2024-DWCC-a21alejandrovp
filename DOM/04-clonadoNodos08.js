@@ -10,4 +10,9 @@
 // ------------------------------------------
 // ------------------------------------------
 
-const ordenarTabla = function ordenarTabla() {};
+const ordenarTabla = function ordenarTabla() {
+  const tbtr = document.querySelector("tbody").querySelectorAll("tr");
+  console.log(tbtr);
+};
+
+ordenarTabla();
