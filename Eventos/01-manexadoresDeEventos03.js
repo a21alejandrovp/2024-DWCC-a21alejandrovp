@@ -4,20 +4,12 @@
 // ------------------------------------------------------------------------------------------------------------------
 // ------------------------------------------------------------------------------------------------------------------
 
-// MANEJADORES DE EVENTOS - EJERCICIO 2 - PÁGINA 5
+// MANEJADORES DE EVENTOS - EJERCICIO 3 - PÁGINA 5
 // -----------------------------------------------
 // -----------------------------------------------
 // -----------------------------------------------
 // -----------------------------------------------
 
-const valorTexto = function valorTexto() {
-  const value = document.querySelector("input[id='text']").value;
-  const ul = document.querySelector("ul");
-  const li = document.createElement("li");
-  li.innerText = value;
-  ul.append(li);
-};
+// Ao facer clic no botón, o que sucederá depende de como se xestione o fluxo de manexadores de eventos. Dado que a propiedade onclick substitúe o manexador de eventos previamente asignado á mesma, cando se fai clic no botón, a función asociada á propiedade onclick (que imprime "2") será executada en lugar do manexador engadido con addEventListener.
 
-const añadirLista = document
-  .querySelector("input[id='button']")
-  .addEventListener("click", valorTexto);
+// Por tanto, ao clicar no botón, aparecerá o valor "2".

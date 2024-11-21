@@ -4,20 +4,22 @@
 // ------------------------------------------------------------------------------------------------------------------
 // ------------------------------------------------------------------------------------------------------------------
 
-// MANEJADORES DE EVENTOS - EJERCICIO 2 - PÁGINA 5
+// MANEJADORES DE EVENTOS - EJERCICIO 4 - PÁGINA 6
 // -----------------------------------------------
 // -----------------------------------------------
 // -----------------------------------------------
 // -----------------------------------------------
 
-const valorTexto = function valorTexto() {
-  const value = document.querySelector("input[id='text']").value;
-  const ul = document.querySelector("ul");
-  const li = document.createElement("li");
-  li.innerText = value;
-  ul.append(li);
+const mostrarMenu = function mostrarMenu() {
+  const ul = document.querySelector("ul").classList.toggle("oculto");
 };
 
-const añadirLista = document
-  .querySelector("input[id='button']")
-  .addEventListener("click", valorTexto);
+// const p = document
+//   .querySelector("p[id='p']")
+//   .addEventListener("click", mostrarMenu);
+
+const paragrafo = document.querySelector("p");
+console.log(paragrafo);
+
+console.log(document.querySelector("ul"));
+console.log(1111);
