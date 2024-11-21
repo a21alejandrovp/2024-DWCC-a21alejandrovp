@@ -14,12 +14,4 @@ const mostrarMenu = function mostrarMenu() {
   const ul = document.querySelector("ul").classList.toggle("oculto");
 };
 
-// const p = document
-//   .querySelector("p[id='p']")
-//   .addEventListener("click", mostrarMenu);
-
-const paragrafo = document.querySelector("p");
-console.log(paragrafo);
-
-console.log(document.querySelector("ul"));
-console.log(1111);
+const p = document.querySelector("p").addEventListener("click", mostrarMenu);
