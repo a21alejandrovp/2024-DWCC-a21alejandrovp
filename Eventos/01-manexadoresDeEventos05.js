@@ -12,31 +12,31 @@
 
 const click = document
   .querySelector("img")
-  .addEventListener("click", console.log("Click"));
+  .addEventListener("click", () => console.log("Click"));
 const dbclick = document
   .querySelector("img")
-  .addEventListener("dbclick", console.log("dbclick"));
+  .addEventListener("dblclick", () => console.log("dblclick"));
 const contextmenu = document
   .querySelector("img")
-  .addEventListener("contextmenu", console.log("contextmenu"));
+  .addEventListener("contextmenu", () => console.log("contextmenu"));
 const mousedown = document
   .querySelector("img")
-  .addEventListener("mousedown", console.log("mousedown"));
+  .addEventListener("mousedown", () => console.log("mousedown"));
 const moseup = document
   .querySelector("img")
-  .addEventListener("mouseup", console.log("mouseup"));
+  .addEventListener("mouseup", () => console.log("mouseup"));
 const mouseover = document
   .querySelector("img")
-  .addEventListener("mouseover", console.log("mouseover"));
+  .addEventListener("mouseover", () => console.log("mouseover"));
 const mouseout = document
   .querySelector("img")
-  .addEventListener("mouseout", console.log("mouseout"));
+  .addEventListener("mouseout", () => console.log("mouseout"));
 const dragstart = document
   .querySelector("img")
-  .addEventListener("dragstart", console.log("dragstart"));
+  .addEventListener("dragstart", () => console.log("dragstart"));
 const drag = document
   .querySelector("img")
-  .addEventListener("drag", console.log("drag"));
+  .addEventListener("drag", () => console.log("drag"));
 const dragend = document
   .querySelector("img")
-  .addEventListener("dragend", console.log("dragend"));
+  .addEventListener("dragend", () => console.log("dragend"));
