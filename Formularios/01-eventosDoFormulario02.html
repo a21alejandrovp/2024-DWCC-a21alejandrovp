@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>Form validation: Task 3</title>
+    <style>
+      body {
+        background-color: #fff;
+        color: #333;
+        font: 1em / 1.4 Helvetica Neue, Helvetica, Arial, sans-serif;
+        padding: 1em;
+        margin: 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form>
+      <label for="mail"
+        >I would like you to provide me with an e-mail address:</label
+      >
+      <input type="email" id="mail" name="mail" required maxlength="30" />
+      <button>Submit</button>
+    </form>
+  </body>
+  <script>
+    const email = document
+      .getElementById("mail")
+      .addEventListener("input", function () {
+        const emailInput = this;
+        const errorMessage = document.getElementById("error-message");
+        const emailValue = emailInput.value;
+
+        const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+        if (!emailRegex.test(emailValue)) {
+          errorMessage.textContent =
+            "Por favor, introduce un enderezo de correo electrónico válido.";
+          errorMessage.style.display = "block";
+        } else {
+          errorMessage.style.display = "none";
+        }
+      });
+  </script>
+</html>

@@ -2,8 +2,7 @@
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
-    <title>Form validation: Task 1</title>
-    <script src="01-formularios01"></script>
+    <title>01-eventosDoFormulario01s</title>
     <style>
       body {
         background-color: #fff;
@@ -40,16 +39,22 @@
             name="email"
             id="email"
             required
-            pattern="^[a-z]+@bigcorp\.eu$"
+            pattern="^[a-zA-Z0-9]+@bigcorp\.eu$"
           />
         </li>
         <li>
           <label for="phone">Phone number:</label>
-          <input type="text" name="phone" id="phone" required />
+          <input
+            type="text"
+            name="phone"
+            id="phone"
+            required
+            pattern="^\d{3}([.-\s])\d{2}\1\d{2}\1\d{2}$"
+          />
         </li>
         <li>
           <label for="comment">Comment:</label>
-          <textarea name="comment" id="comment"> </textarea>
+          <textarea name="comment" id="comment" maxlength="200"> </textarea>
         </li>
         <li>
           <button>Submit comment</button>
