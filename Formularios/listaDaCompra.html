@@ -3,76 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>listaDaCompra</title>
-    <style>
-      body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100vw;
-      }
-
-      .containerPadre {
-        width: 50%;
-        background-color: rgb(240, 240, 240);
-      }
-
-      .container0 {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-      }
-
-      .container1 {
-        padding-left: 30px;
-        padding-right: 30px;
-        padding-bottom: 10px;
-      }
-
-      .container2 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .container3 {
-        display: flex;
-        background-color: black;
-        color: white;
-        margin-left: 35px;
-        margin-top: 20px;
-        font-size: 18px;
-        border-radius: 5px;
-        height: 35px;
-        align-items: center;
-      }
-
-      input {
-        font-size: 18px;
-        width: 90%;
-        height: 35px;
-      }
-    </style>
+    <title>LISTA DA COMPRA</title>
+    <script src="listaDaCompra.js" defer></script>
+    <link rel="stylesheet" href="listaDaCompra.css" />
   </head>
   <body>
-    <div class="containerPadre">
-      <div class="container0">
-        <div class="container1">
-          <img
-            src="listaDaCompra.png"
-            alt="Emoticono da lista da compra"
-            width="50"
-            height="50"
-          />
-        </div>
-        <div class="container1"><h1>Lista compra</h1></div>
-      </div>
-      <div class="container2">
-        <input type="text" placeholder=" Introduce un elemento" />
-      </div>
-      <div>
-        <button class="container3">+ Engadir elemento</button>
-      </div>
-    </div>
+    <h1>Lista da compra</h1>
+    <input
+      type="text"
+      placeholder="Introduce un elemento"
+      class="inputEngadir"
+    />
+    <br /><br />
+    <input type="button" value="+ Engadir elemento" class="buttonEngadir" />
+    <br /><br />
+    <input type="text" placeholder="Filter Items" />
+    <br /><br />
+    <ul class="items"></ul>
   </body>
 </html>
