@@ -17,13 +17,23 @@ const añadirElementos = document
     li.append(p, input);
     divul.append(li);
     ul.append(divul);
+  });
 
-    if (document.querySelector("input[class = 'X']") != null) {
-      const eliminarElementos = document
-        .querySelector("input[class = 'X']")
-        .addEventListener("click", (event) => {
-          if (event.target.tagName == "INPUT") {
-          }
-        });
+const eliminarElementos = document
+  .querySelector("ul[class = 'items']")
+  .addEventListener("click", (event) => {
+    if (event.target.tagName == "INPUT") {
+      if (window.confirm("Deseas eliminar el elemento?")) {
+        const li = event.target.closest("li").remove();
+      }
     }
+  });
+
+const eliminarTodosElementos = document
+  .querySelector("input[class = 'buttonBorrar']")
+  .addEventListener("click", () => {
+    const len = document.querySelector("ul[class = 'items']").children.length;
+    let array = Array.from(
+      document.querySelector("ul[class = 'items']").children
+    );
   });
