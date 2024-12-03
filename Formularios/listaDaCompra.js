@@ -33,7 +33,26 @@ const eliminarTodosElementos = document
   .querySelector("input[class = 'buttonBorrar']")
   .addEventListener("click", () => {
     const len = document.querySelector("ul[class = 'items']").children.length;
-    let array = Array.from(
+    const itemsArray = Array.from(
       document.querySelector("ul[class = 'items']").children
     );
+
+    for (let i = 0; i < len; i++) {
+      itemsArray.pop().remove();
+    }
+  });
+
+const filtrarElementos = document
+  .querySelector("input[class = 'inputFiltro']")
+  .addEventListener("input", (event) => {
+    const len = document.querySelector("ul[class = 'items']").children.length;
+
+    const items = Array.from(
+      document.querySelector("ul[class = 'items']").children
+    );
+
+    items.forEach((div) => {
+      const p = div.querySelector("p");
+      console.log(p);
+    });
   });
