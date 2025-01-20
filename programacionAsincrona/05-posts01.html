@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>05-posts01</title>
+    <script src="05-posts01.js" defer></script>
+    <style>
+      /* Estilos generales para la tabla */
+      table {
+        width: 80%;
+        margin: 20px auto;
+        border-collapse: collapse;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      /* Estilos para las celdas */
+      th,
+      td {
+        padding: 12px 20px;
+        text-align: left;
+        font-family: "Arial", sans-serif;
+        font-size: 14px;
+      }
+
+      /* Estilos para las cabeceras */
+      th {
+        background-color: #4caf50;
+        color: white;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      /* Estilos para las filas */
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+
+      tr:nth-child(odd) {
+        background-color: #fff;
+      }
+
+      /* Efecto al pasar el cursor sobre las filas */
+      tr:hover {
+        background-color: #e1f7d5;
+      }
+
+      /* Bordes de la tabla */
+      td,
+      th {
+        border-bottom: 1px solid #ddd;
+      }
+
+      /* Estilo para las filas seleccionadas (si es necesario) */
+      tr.selected {
+        background-color: #d4edda;
+      }
+
+      /* Estilo para las celdas con datos destacados */
+      td.highlight {
+        font-weight: bold;
+        color: #4caf50;
+      }
+
+      /* Estilos generales para el formulario */
+      form {
+        max-width: 500px;
+        width: 100%;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        font-family: "Arial", sans-serif;
+        box-sizing: border-box; /* Asegura que el padding no cause desbordes */
+      }
+
+      /* Estilos para el título del formulario */
+      form h2 {
+        text-align: center;
+        font-size: 24px;
+        color: #333;
+        margin-bottom: 20px;
+      }
+
+      /* Estilos para los campos de entrada */
+      input[type="text"],
+      input[type="number"],
+      input[type="email"],
+      select,
+      textarea {
+        width: 100%; /* Ahora se ajusta al tamaño del formulario */
+        box-sizing: border-box; /* Asegura que el padding esté dentro del tamaño total */
+        padding: 12px 20px;
+        margin: 10px 0;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+        color: #333;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      /* Efecto de enfoque en los inputs */
+      input[type="text"]:focus,
+      input[type="number"]:focus,
+      input[type="email"]:focus,
+      select:focus,
+      textarea:focus {
+        border-color: #4caf50;
+        box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+        outline: none;
+      }
+
+      /* Estilo para el botón */
+      button {
+        width: 100%;
+        padding: 14px;
+        background-color: #4caf50;
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      /* Efecto hover para el botón */
+      button:hover {
+        background-color: #45a049;
+      }
+
+      /* Estilos para las etiquetas */
+      label {
+        font-size: 16px;
+        margin-bottom: 8px;
+        display: block;
+        color: #555;
+      }
+
+      /* Espaciado entre campos */
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      /* Estilos para los mensajes de error (si es necesario) */
+      .error {
+        color: red;
+        font-size: 14px;
+      }
+
+      /* Consultas de medios para hacer el diseño más responsivo */
+
+      /* Para pantallas pequeñas como móviles */
+      @media (max-width: 600px) {
+        table {
+          width: 100%; /* La tabla ocupará todo el ancho en pantallas pequeñas */
+        }
+
+        form {
+          width: 90%; /* El formulario también ocupará más espacio en pantallas pequeñas */
+        }
+
+        form h2 {
+          font-size: 20px; /* El título se ajusta a tamaños más pequeños */
+        }
+
+        /* Ajustar los tamaños de fuente y relleno en inputs para móviles */
+        input[type="text"],
+        input[type="number"],
+        input[type="email"],
+        select,
+        textarea {
+          font-size: 14px;
+          padding: 10px;
+        }
+
+        button {
+          padding: 12px; /* Reducir un poco el tamaño del botón */
+          font-size: 16px; /* Reducir el tamaño del texto en el botón */
+        }
+      }
+
+      /* Para pantallas medianas como tabletas */
+      @media (max-width: 768px) {
+        table {
+          width: 90%; /* La tabla ocupará el 90% en tabletas */
+        }
+
+        form {
+          width: 80%; /* El formulario será más pequeño en tabletas */
+        }
+
+        form h2 {
+          font-size: 22px; /* Ajustar el tamaño del título en tabletas */
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="email"],
+        select,
+        textarea {
+          font-size: 15px; /* Aumentar un poco el tamaño de los inputs */
+          padding: 11px 18px;
+        }
+
+        button {
+          font-size: 17px;
+        }
+      }
+    </style>
+  </head>
+  <body></body>
+</html>
