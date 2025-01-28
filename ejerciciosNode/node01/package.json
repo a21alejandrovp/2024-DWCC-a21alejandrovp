@@ -1,0 +1,14 @@
+{
+  "name": "node01",
+  "version": "10.7.0",
+  "description": "Ejercicio 1 (Página 49)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "a21alejandrovp",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.9"
+  }
+}
