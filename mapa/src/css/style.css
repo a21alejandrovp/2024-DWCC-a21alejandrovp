@@ -1,0 +1,17 @@
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+#container {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+}
+
+#map,
+#marcadores {
+  height: 100%;
+  width: 50%;
+}
