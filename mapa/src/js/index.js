@@ -23,12 +23,26 @@ if ("geolocation" in navigator) {
           lugarDelClick.latlng.lat +
           "&longitude=" +
           lugarDelClick.latlng.lng +
-          "&hourly=temperature_2m&timezone=America%2FAnchorage";
+          "&current=temperature_2m&hourly=temperature_2m";
 
-        // fetch(url); SEGUIR AQUI
+        console.log(url);
 
+        const dvii = document.createElement("div");
+        const dvi = document.createElement("div");
+        dvi.style.display = "flex";
+        dvi.style.height = "10%";
+        dvi.style.width = "75%";
+        dvi.style.border = "1px solid black";
+        dvi.style.borderRadius = "25px";
+        dvi.style.justifyContent = "center";
+        dvi.style.alignItems = "center";
+        dvi.style.margin = "10px";
         const div = document.createElement("div");
         const form = document.createElement("form");
+        form.style.display = "flex";
+        form.style.flexDirection = "column";
+        form.style.justifyContent = "center";
+        form.style.alignItems = "center";
         const label = document.createElement("label");
         label.for = "descripcion";
         label.innerText = "Descripción";
@@ -38,20 +52,56 @@ if ("geolocation" in navigator) {
 
         form.append(label, br, input);
         div.append(form);
-        document.body.querySelector("div[id='marcadores']").append(div);
+        dvi.append(div);
+        document.body.querySelector("div[id='marcadores']").append(dvi);
 
         // CODIGO DEL FORMULARIO
         const enviarFormulario = function enviarFormulario(e) {
           e.preventDefault();
 
-          div.remove();
+          dvi.remove();
           const nuevoDiv = document.createElement("div");
           const p = document.createElement("p");
           p.innerText = input.value;
+          p.style.margin = 0;
 
           nuevoDiv.append(p);
-          document.body.querySelector("div[id='marcadores']").append(nuevoDiv);
 
+          fetch(url)
+            .then((response) => {
+              return response.json();
+            })
+            .then((json) => {
+              console.log(json.current.temperature_2m);
+              const p2 = document.createElement("p");
+              p2.innerText = json.current.temperature_2m;
+              p2.style.margin = 0;
+              nuevoDiv.append(p2);
+
+              if (json.current.temperature_2m < 15) {
+                nuevoDiv.style.backgroundColor = "blue";
+              } else if (
+                json.current.temperature_2m >= 15 &&
+                json.current.temperature_2m < 25
+              ) {
+                nuevoDiv.style.backgroundColor = "orange";
+              } else {
+                nuevoDiv.style.backgroundColor = "red";
+              }
+            });
+
+          nuevoDiv.style.display = "flex";
+          nuevoDiv.style.flexDirection = "column";
+          nuevoDiv.style.height = "10%";
+          nuevoDiv.style.width = "70%";
+          nuevoDiv.style.border = "1px solid black";
+          nuevoDiv.style.justifyContent = "center";
+          nuevoDiv.style.alignItems = "center";
+          nuevoDiv.style.margin = "10px";
+          nuevoDiv.style.borderRadius = "25px";
+          nuevoDiv.style.color = "white";
+
+          document.body.querySelector("div[id='marcadores']").append(nuevoDiv);
           console.log(input.value);
         };
 
