@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>01-vue01</title>
+    <script type="module" src="01-vue01.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <p v-html="cadea"></p>
+      <p>Cadena de ejemplo</p>
+      <!-- <h2 :data-id="nuevoId">{{ number }}</h2> -->
+      <!-- <h2 v-bind:id="nuevoId">{{ number }}</h2> -->
+      <!-- <h2 v-bind="nuevoIdClase">{{ number }}</h2> -->
+      <h3>
+        <ul>
+          <li v-for="item in array" :key="item">{{ item }}</li>
+        </ul>
+      </h3>
+      <h4>{{ objeto.id }} - {{ objeto.nombre }}</h4>
+    </div>
+  </body>
+</html>
