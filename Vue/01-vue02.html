@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>01-vue02</title>
+    <script type="module" src="01-vue02.js"></script>
+  </head>
+  <body id="body">
+    <p>{{ nome }}</p>
+    <p>{{ ano }}</p>
+    <p>{{ ano + 5 }}</p>
+    <img :src="src" alt="Elefante pequeño" />
+    <br />
+    <input type="text" v-bind:value="nome" />
+    <br />
+    <p>{{ count }}</p>
+    <button @click="increment">Incrementar</button>
+    <button @click="decrement">Decrementar</button>
+  </body>
+</html>
