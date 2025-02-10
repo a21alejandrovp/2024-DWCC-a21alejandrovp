@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>03-modificadoresDeEventos01</title>
+    <script type="module" src="03-modificadoresDeEventos01.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <button @click.middle="mensaxePorConsola">Pokemon</button>
+      <br /><br />
+      <input type="text" @input="escribirParagrafo" />
+      <p>{{paragrafo}}</p>
+      <input
+        type="text"
+        @keydown="escribirParagrafo2"
+        @keydown.enter="borrarInput"
+      />
+      <p>{{paragrafo2}}</p>
+    </div>
+  </body>
+</html>
