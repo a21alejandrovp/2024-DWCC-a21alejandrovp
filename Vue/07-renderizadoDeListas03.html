@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>07-renderizadoDeListas03</title>
+    <script type="module" src="07-renderizadoDeListas03.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <ul>
+        <li
+          v-for="pokemon in iniciales"
+          @click="eliminarPokemon"
+          :key="pokemon.id"
+        >
+          {{pokemon.name}}
+        </li>
+      </ul>
+      <hr />
+      <p>Introduce el nombre de un Pokemón:</p>
+      <input type="text" v-model="nuevoPokemon" /><br /><br />
+      <button @click="añadirPokemon">Añadir pokemon</button>
+      <hr />
+    </div>
+  </body>
+</html>
