@@ -16,11 +16,19 @@ createApp({
   },
   methods: {
     añadirPokemon() {
-      this.iniciales.push(this.nuevoPokemon);
-      console.log(this.iniciales);
+      this.iniciales.push({ id: id++, name: this.nuevoPokemon });
     },
     eliminarPokemon(e) {
-      console.log(e.target.value);
+      if (e.target.tagName === "LI") {
+        for (let i = 0; i < this.iniciales.length; i++) {
+          if (e.target.innerText === this.iniciales[i].name) {
+            let pos = this.iniciales.indexOf(this.iniciales[i].name);
+            this.iniciales.splice(pos, [i - 1]);
+          }
+        }
+        e.target.remove();
+        console.log(this.iniciales.length);
+      }
     },
   },
 }).mount("#app");
