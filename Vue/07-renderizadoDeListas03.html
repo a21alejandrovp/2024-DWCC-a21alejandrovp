@@ -5,10 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>07-renderizadoDeListas03</title>
     <script type="module" src="07-renderizadoDeListas03.js"></script>
+    <style>
+      .hidden {
+        display: none;
+      }
+    </style>
   </head>
   <body>
     <div id="app">
-      <ul>
+      <ul :class="{hidden: oculto}">
         <li
           v-for="pokemon in iniciales"
           @click="eliminarPokemon"
@@ -17,6 +22,8 @@
           {{pokemon.name}}
         </li>
       </ul>
+      <button @click="mostrarLista">Mostrar lista</button>
+      <button @click="ocultarLista">Ocultar lista</button>
       <hr />
       <p>Introduce el nombre de un Pokemón:</p>
       <input type="text" v-model="nuevoPokemon" /><br /><br />

@@ -12,6 +12,7 @@ createApp({
         { id: id++, name: "Venusaur" },
       ],
       nuevoPokemon: "",
+      oculto: false,
     };
   },
   methods: {
@@ -20,15 +21,22 @@ createApp({
     },
     eliminarPokemon(e) {
       if (e.target.tagName === "LI") {
+        console.log(this.iniciales);
         for (let i = 0; i < this.iniciales.length; i++) {
           if (e.target.innerText === this.iniciales[i].name) {
-            let pos = this.iniciales.indexOf(this.iniciales[i].name);
-            this.iniciales.splice(pos, [i - 1]);
+            let pos = i;
+            this.iniciales.splice(pos, 1);
+            e.target.remove();
+            break;
           }
         }
-        e.target.remove();
-        console.log(this.iniciales.length);
       }
+    },
+    ocultarLista() {
+      this.oculto = true;
+    },
+    mostrarLista() {
+      this.oculto = false;
     },
   },
 }).mount("#app");
