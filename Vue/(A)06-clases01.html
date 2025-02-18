@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>06-clases01</title>
-    <script type="module" src="06-clases01.js"></script>
+    <script type="module" src="(A)06-clases01.js"></script>
     <style>
       .green {
         color: green;
@@ -13,12 +13,17 @@
       .red {
         color: red;
       }
+
+      .blue {
+        color: blue;
+      }
     </style>
   </head>
   <body>
     <div id="app">
-      <p @click="toggle" :class="{red: isTrue}">RED</p>
-      <p @click="toggle" :class="{green: isTrue, red: isFalse}">GREEN</p>
+      <p @click="toggle1" :class="{blue: esVerdadero}">RED</p>
+      <!-- <p @click="toggle" :class="{green: isTrue, red: isFalse}">GREEN</p> -->
+      <p @click="toggle" :class="greenRed">GREEN</p>
     </div>
   </body>
 </html>

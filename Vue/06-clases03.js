@@ -3,18 +3,22 @@ import { createApp } from "https://unpkg.com/vue@3/dist/vue.esm-browser.js";
 createApp({
   data() {
     return {
-      isTrue: true,
+      claseAclaseB: "",
       isFalse: false,
     };
   },
   methods: {
-    toggle() {
-      if (this.isTrue == true) {
-        this.isTrue = false;
+    recogerTexto(e) {
+      this.claseAclaseB = e.target.value;
+    },
+
+    ocultarParrafo(e) {
+      if (this.isFalse == false) {
         this.isFalse = true;
+        e.target.innerText = "Mostrar";
       } else {
-        this.isTrue = true;
         this.isFalse = false;
+        e.target.innerText = "Ocultar";
       }
     },
   },

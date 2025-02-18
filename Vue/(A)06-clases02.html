@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>06-clases02</title>
+    <script type="module" src="(A)06-clases02.js"></script>
+    <style>
+      .activa {
+        background-color: lightgray;
+        border: 1px solid black;
+      }
+
+      .nonactiva {
+        background-color: red;
+        border: 2px dashed green;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <table>
+        <tbody>
+          <tr @click="toggle">
+            <td :class="solid">AAAAAAAAA1</td>
+            <td :class="dashed">BBBBBBBBB2</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

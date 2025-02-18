@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>06-clases03.html</title>
+    <script type="module" src="06-clases03.js"></script>
+    <style>
+      .claseA {
+        background-color: orange;
+        color: blue;
+      }
+      .claseB {
+        background-color: lightgreen;
+        color: red;
+      }
+      .hidden {
+        display: none;
+      }
+      .visible {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <input type="text" @input="recogerTexto" />
+      <p :class="[claseAclaseB, {hidden: isFalse}]" id="p">LICKITUNG</p>
+      <hr />
+      <button @click="ocultarParrafo">Ocultar</button>
+    </div>
+  </body>
+</html>
