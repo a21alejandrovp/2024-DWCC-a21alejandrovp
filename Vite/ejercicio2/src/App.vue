@@ -1,7 +1,7 @@
 <script></script>
 
 <template>
-  <Fooditem />
+  <Item />
 </template>
 
 <style></style>
