@@ -1,7 +1,5 @@
 <script></script>
 
-<template>
-  <Item />
-</template>
+<template><exerciseb /></template>
 
 <style></style>
